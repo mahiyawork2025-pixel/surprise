@@ -1,0 +1,197 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #2b1055, #1a1f4c 60%, #0d0f2b);
+  color: white;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* =========================
+   ANIMATED STAR BACKGROUND
+========================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.08;
+  animation: moveStars 60s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #f4c430, #ffd86f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  opacity: 0.92;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f4c430, #ffd86f);
+  color: #1a1f4c;
+  box-shadow: 0 0 15px rgba(244,196,48,0.5);
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(255,216,111,0.9);
+}
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
+input {
+  padding: 12px;
+  width: 250px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  backdrop-filter: blur(5px);
+}
+
+/* =========================
+   GLASS CARD STYLE
+========================= */
+
+.glass-card,
+.resource-card,
+.final-card,
+.task-box {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+}
+
+.glass-card:hover,
+.resource-card:hover,
+.task-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(244,196,48,0.4);
+}
+
+/* =========================
+   CHECKLIST STYLING
+========================= */
+
+.task-box {
+  padding: 18px;
+  margin: 15px auto;
+  width: 80%;
+  cursor: pointer;
+}
+
+.task-box.done {
+  background: rgba(244,196,48,0.2);
+  border: 1px solid #f4c430;
+  text-decoration: line-through;
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-bar-container {
+  width: 80%;
+  margin: 20px auto;
+  height: 20px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f4c430, #ffd86f);
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+
+/* =========================
+   DOWNLOAD BUTTONS
+========================= */
+
+.download-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  background: linear-gradient(135deg, #f4c430, #ffd86f);
+  color: #1a1f4c;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,216,111,0.8);
+}
+
+/* =========================
+   FADE IN ANIMATION
+========================= */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

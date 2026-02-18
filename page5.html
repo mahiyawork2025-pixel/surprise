@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ramadan Resource Vault</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+.resource-card {
+  background: rgba(255,255,255,0.08);
+  padding:25px;
+  border-radius:25px;
+  width:80%;
+  margin:20px auto;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.resource-card:hover {
+  transform: scale(1.03);
+  background: rgba(255,255,255,0.15);
+}
+
+.resource-title {
+  font-size:22px;
+  margin-bottom:10px;
+  font-weight:bold;
+}
+
+.resource-description {
+  opacity:0.85;
+  margin-bottom:15px;
+  line-height:1.6;
+}
+
+.download-btn {
+  display:inline-block;
+  padding:12px 20px;
+  background:#f4c430;
+  color:#1a1f4c;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.download-btn:hover {
+  transform:scale(1.08);
+}
+
+.section-intro {
+  width:80%;
+  margin:0 auto 30px auto;
+  opacity:0.9;
+  line-height:1.7;
+}
+
+</style>
+</head>
+
+<body onload="loadVaultName()">
+
+<div class="container">
+
+<h1><span id="greetName"></span>’s Ramadan Growth Vault 📖🌙</h1>
+
+<p class="section-intro">
+These are not just PDFs.  
+They are tools to strengthen your discipline, increase your closeness to Allah,
+and build the foundation for the man you are becoming.
+</p>
+
+<!-- TAHJUD GUIDE -->
+
+<div class="resource-card">
+  <div class="resource-title">🌌 Tahajjud – The Night That Changes Everything</div>
+
+  <div class="resource-description">
+    This guide will help you understand the power of waking up in the last third of the night.
+    The Prophet ﷺ consistently prayed at night even though his sins were forgiven.
+    
+    Tahajjud builds:
+    • Emotional control  
+    • Mental clarity  
+    • Barakah in rizq  
+    • Inner leadership  
+
+    Career breakthroughs often begin in sujood.
+  </div>
+
+  <a href="tahajjud ebook.pdf" class="download-btn" download>
+    Download Tahajjud Guide
+  </a>
+</div>
+
+<!-- 99 NAMES -->
+
+<div class="resource-card">
+  <div class="resource-title">✨ The 99 Names of Allah – Power in Knowing Who He Is</div>
+
+  <div class="resource-description">
+    When you know Allah as Ar-Razzaq (The Provider),
+    you stop fearing financial instability.
+
+    When you know Him as Al-Fattah (The Opener),
+    you stop fearing closed doors.
+
+    When you know Him as Al-Wakeel (The Trustee),
+    you stop overthinking outcomes.
+
+    This guide helps you connect deeply with His Names
+    and make dua with certainty.
+  </div>
+
+  <a href="99 NAMES OF ALLAH.pdf" class="download-btn" download>
+    Download 99 Names Guide
+  </a>
+</div>
+
+<p style="margin-top:30px; font-style:italic; opacity:0.85;">
+Knowledge + Action = Transformation.
+</p>
+
+<button style="margin-top:20px;" onclick="location.href='page6.html'">
+Final Message 🌙
+</button>
+
+</div>
+
+<script>
+function loadVaultName(){
+  document.getElementById("greetName").innerText =
+    localStorage.getItem("bfName") || "Your";
+}
+</script>
+
+</body>
+</html>

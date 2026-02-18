@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A Du'a For Us</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+.final-card {
+  background: rgba(255,255,255,0.08);
+  padding:35px;
+  border-radius:30px;
+  width:80%;
+  margin:30px auto;
+  border:1px solid rgba(255,255,255,0.15);
+  animation:fadeIn 1s ease-in-out;
+}
+
+.divider {
+  width:60%;
+  height:1px;
+  background:rgba(255,255,255,0.3);
+  margin:25px auto;
+}
+
+.signature {
+  margin-top:25px;
+  font-style:italic;
+  opacity:0.85;
+}
+
+.glow {
+  color:#f4c430;
+  font-weight:bold;
+}
+
+</style>
+</head>
+
+<body onload="loadFinalName()">
+
+<div class="container">
+
+<h1>🌙 A Du'a For You, <span id="greetName"></span></h1>
+
+<div class="final-card">
+
+<p>
+This Ramadan is not just about fasting.
+It is about becoming.
+</p>
+
+<p>
+Becoming stronger in discipline.
+Becoming softer in character.
+Becoming steadier in faith.
+Becoming the man Allah is shaping you into.
+</p>
+
+<div class="divider"></div>
+
+<p>
+Allah says:
+</p>
+
+<p>
+“And whoever relies upon Allah — then He is sufficient for him.”
+— Qur’an 65:3
+</p>
+
+<p>
+And:
+</p>
+
+<p>
+“Our Lord, grant us from our spouses and offspring comfort to our eyes
+and make us leaders for the righteous.”
+— Qur’an 25:74
+</p>
+
+<div class="divider"></div>
+
+<p>
+May Allah open for you doors of rizq you never imagined.
+</p>
+
+<p>
+May He remove anxiety from your heart and replace it with tawakkul.
+</p>
+
+<p>
+May He strengthen your salah, your discipline, your patience.
+</p>
+
+<p>
+May He grant clarity in your career decisions.
+</p>
+
+<p>
+May He write for us a future that is halal, peaceful, and full of barakah.
+</p>
+
+<div class="divider"></div>
+
+<p class="glow">
+This Ramadan is not pressure.
+It is preparation.
+</p>
+
+<p>
+And I believe in the man you are becoming.
+But more importantly,
+Allah sees your effort — even when no one else does.
+</p>
+
+<div class="divider"></div>
+
+<p style="font-style:italic;">
+“O Allah, bless him with guidance, provision, strength,
+and a heart that never drifts from You.
+Make him firm in faith and successful in both worlds.”
+Ameen.
+</p>
+
+<p class="signature">
+With sincerity and du'a 🤍
+</p>
+
+</div>
+
+<button onclick="location.href='index.html'" style="margin-top:20px;">
+Restart Journey 🌙
+</button>
+
+</div>
+
+<script>
+function loadFinalName(){
+  document.getElementById("greetName").innerText =
+    localStorage.getItem("bfName") || "";
+}
+</script>
+
+</body>
+</html>

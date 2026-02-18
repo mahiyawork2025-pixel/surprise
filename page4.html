@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your Ramadan Mission</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+.task-box {
+  background: rgba(255,255,255,0.08);
+  padding:20px;
+  border-radius:20px;
+  margin:15px auto;
+  width:80%;
+  cursor:pointer;
+  transition:0.3s;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.task-box:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.02);
+}
+
+.task-box.done {
+  background: rgba(244,196,48,0.2);
+  border:1px solid #f4c430;
+}
+
+.progress-bar-container {
+  width:80%;
+  background: rgba(255,255,255,0.1);
+  border-radius:20px;
+  margin:20px auto;
+  height:20px;
+}
+
+.progress-bar {
+  height:100%;
+  width:0%;
+  background:#f4c430;
+  border-radius:20px;
+  transition:0.4s;
+}
+
+.percentage {
+  margin-top:10px;
+  font-weight:bold;
+}
+
+</style>
+</head>
+
+<body onload="loadChecklistName()">
+
+<div class="container">
+
+<h1><span id="greetName"></span>’s Ramadan Growth Plan 🌙</h1>
+
+<p>
+This is not just a checklist.  
+This is your transformation blueprint.
+</p>
+
+<div class="progress-bar-container">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<div class="percentage" id="progressText">0% Complete</div>
+
+<div class="task-box" onclick="toggleTask(this)">
+  🌅 Pray Fajr on time with focus
+</div>
+
+<div class="task-box" onclick="toggleTask(this)">
+  📖 Read at least 2 pages of Quran daily
+</div>
+
+<div class="task-box" onclick="toggleTask(this)">
+  🌌 Pray 2 Rak’ah Tahajjud
+</div>
+
+<div class="task-box" onclick="toggleTask(this)">
+  🤲 Make dua for career clarity, stability & our successful marraige
+</div>
+
+<div class="task-box" onclick="toggleTask(this)">
+  ❤️ Control anger & speak gently
+</div>
+
+<div class="task-box" onclick="toggleTask(this)">
+  💰 Give even small charity (Sadaqah)
+</div>
+
+<button style="margin-top:30px;" onclick="location.href='page5.html'">
+Inshallah 🌙
+</button>
+
+</div>
+
+<script>
+
+function loadChecklistName(){
+  document.getElementById("greetName").innerText =
+    localStorage.getItem("bfName") || "Your";
+}
+
+function toggleTask(el){
+  el.classList.toggle("done");
+  updateProgress();
+}
+
+function updateProgress(){
+  const tasks = document.querySelectorAll(".task-box");
+  const completed = document.querySelectorAll(".task-box.done").length;
+  const percent = Math.round((completed/tasks.length)*100);
+
+  document.getElementById("progressBar").style.width = percent + "%";
+  document.getElementById("progressText").innerText = percent + "% Complete";
+
+  if(percent === 100){
+    document.getElementById("progressText").innerText =
+      "100% Complete – May Allah increase you 🌙✨";
+  }
+}
+
+</script>
+
+</body>
+</html>
